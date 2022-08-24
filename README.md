@@ -7,14 +7,23 @@ The purpose of this repository is to demonstrate an introduction to the theory, 
 
 ### Topics
 Probability Foundations
+
 Sequential Experiments
+
 Discrete Random Variables
+
 Continuous Random Variables
+
 Multiple Random Variables
+
 Functions of Random Variables
+
 Conditional Probability Models
+
 Sums of Random Variables
+
 The Sample Mean
+
 Hypothesis Testing
 
 
