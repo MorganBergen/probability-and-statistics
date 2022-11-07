@@ -531,10 +531,26 @@ $$\begin{align} f_X(x) = \frac{1}{\sqrt{2\pi}\sigma} e^{-{(x - \mu)^2}/{2\sigma^
 
 $$\Phi(z) = \frac{1}{\sqrt{2\pi}} \int_{-\infty}^{z} e^{-{u^2}/{2}} du$$
 
-**Definition 4.11 Standard Normal Complementary CDF**
+**Definition 4.11 Standard Normal Complementary CDF**  The standard normal complementary CDF is
 
-**Definition 4.12**
+$$ Q(z) = P[Z > z] = \frac{1}{\sqrt{2\pi}} \int_{z}^{\infty} e^{-{u^2}/{2}} du = 1 - \Phi(z)$$
 
-**Definition 4.13**
+**Definition 4.12 Unit Impluse (Delta) Function** $Let$
 
-**Definition 4.14**
+$$\delta(x) = \begin{cases} 
+            1/{\epsilon} & -\epsilon/2 ≤ x ≤ \epsilon/2 \\
+            0 & \space otherwise \\
+            \end{cases} $$
+
+The unit impulse function 
+
+$$\delta(x) = \lim_{x \to 0} d_{\epsilon}(x)$$
+
+**Definition 4.13 Unit Step Function**  The unit step function is
+
+$$u(x) = \begin{cases} 
+            1 & x < 0 \\
+            0 & x ≥ 0 \\
+            \end{cases} $$
+
+**Definition 4.14 Mixed Random Variable** $X$ is a mixed random variable if and only if $F_X(x)$ contains both impluses and nonzero, finite values.  
