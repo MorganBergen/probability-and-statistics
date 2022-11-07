@@ -11,7 +11,9 @@ $$ (A \cup B)^c = (A^c \cap B^c) $$
 
 $$ P[A_1 \cup A_2] = P[A_1] + P[A_2] $$
 
-**theorem 1.3** If $ A = A_1 \cup A_2 \cup \cdots \cup A_m $ and $ A_i \cap A_j = \emptyset $ for all $ i \neq j $, then
+**theorem 1.3** If 
+
+$ A = A_1 \cup A_2 \cup \cdots \cup A_m \text{ and }  A_i \cap A_j = \emptyset \text { for all } i \neq j \text{ , then } $
 
 $$ P[A] = \sum_{i=1}^m P[A_i] $$
 
