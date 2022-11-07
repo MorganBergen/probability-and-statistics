@@ -51,7 +51,7 @@ $$P[A] = \sum_{i=1}^m P[A \cap B_i$$
 
 **Theorem 1.10**  Law of total probability
 
-For a partition {$ { B_1, B_2, \cdots, B_m } $} with $ P[B_i] > 0 $ for all $ i $,
+For a partition ${ B_1, B_2, \cdots, B_m }$ with $P[B_i] > 0$ for all $i$,
 
 $$ P[A] = \sum_{i=1}^m P[A|B_i] P[B_i] $$
 
@@ -65,29 +65,29 @@ $$ P[B|A] = \frac{P[A|B] P[B]}{P[A]} $$
 
 **Definition 1.3 Event** An event is a subset of the sample space.
 
-**Definition 1.4 Axioms of Probability** A probability measure $ P[.] $ is a function that maps events in the sample spacce to real numbers such that 
+**Definition 1.4 Axioms of Probability** A probability measure $P[.]$ is a function that maps events in the sample spacce to real numbers such that 
 
-**Axiom 1** For any event $ A $, $ P[A] \geq 0 $
+**Axiom 1** For any event $A$, $P[A] \geq 0$
 
-**Axiom 2** $ P[S] = 1 $
+**Axiom 2** $P[S] = 1$
 
-**Axiom 3** For any countable collection $A_1, A_2, \cdots $ of mutually exclusive events, 
+**Axiom 3** For any countable collection $A_1, A_2, \cdots$ of mutually exclusive events, 
 
 $$ P[A_1 \cup A_2 \cup \cdots] = P[A_1] + P[A_2] + \cdots $$
 
-**Definition 1.5 Conditional probability** The conditional probability of an event $ A $ given the occurance of the event B is 
+**Definition 1.5 Conditional probability** The conditional probability of an event $A$ given the occurance of the event B is 
 
 $$ P[A|B] = {P[AB] \over P[B]}$$
 
-Conditional probability is defined only when $ P[B] > 0 $.  
+Conditional probability is defined only when $P[B] > 0$.  
 
-**Definition 1.6 Two independent events** Two events $ A $ and $ B $ are independent if 
+**Definition 1.6 Two independent events** Two events $A$ and $B$ are independent if 
 
 $$ P[AB] = P[A]P[B] $$
 
-**Definition 1.7 Three Independent Events** $ A_1, A_2, A_3 $ are mutually exclusive and independent if and only if
+**Definition 1.7 Three Independent Events** $A_1, A_2, A_3$ are mutually exclusive and independent if and only if
 
-(a) $A_1$ and $A_2 $ are independent 
+(a) $A_1$ and $A_2$ are independent 
 
 (b) $A_2$ and $A_3$ are independent
 
@@ -214,31 +214,27 @@ $$ Var[aX + b] = a^2 Var[X] $$
 
 **Theorem 3.16**
 
-$ \text{(a) If X is Bernoiulli (p), then } \space{  } Var[X] = p(1-p) $
+(a) If X is Bernoiulli $(p)$, then $Var[X] = p(1-p)$
 
-$ \text{(b) If X is geometric (p), then } \space{  } Var[X] = ({1-p})/{p^2} $
+(b) If X is geometric $(p)$, then $Var[X] = ({1-p})/{p^2}$
 
-$ \text{(c) If X is binomial (n, p), then } \space{  }  Var[X] = np(1 - p) $
+(c) If X is binomial $(n, p)$, then $Var[X] = np(1 - p)$
 
-$ \text{(d) If X is Pascal (k, p), then } \space{  }  Var[X] = k(1 - p)/p^2 $
+(d) If X is Pascal $(k, p)$, then $Var[X] = k(1 - p)/p^2$
 
-$ \text{(e) If X is Poisson } (\alpha) \text{, then} \space{  }  Var[X] = \alpha $
+(e) If X is Poisson $(\alpha)$ then $Var[X] = \alpha$
 
-$ \text{(f) If X is discrete uniform (k, l), then } \space{  }  Var[X] = (l - k)(l - k + 2)/12 $
+(f) If X is discrete uniform (k, l), then $Var[X] = (l - k)(l - k + 2)/12$
 
 **Definition 3.1 Random Variable**
 
 A random variable consists of an experiment with a probability measure $P[.]$ defined on a sample space S and a function that assigns a real number to each outcome in the sample spacce of the experiment.
 
-**Definition 3.2 Discrete Random Variable**
-
-$X$ is a discrete random variable if the range of $X$ is a countable set.
+**Definition 3.2 Discrete Random Variable**  $X$ is a discrete random variable if the range of $X$ is a countable set.
 
 $$ S_X = \{ x_1, x_2, \dots \} $$
 
-**Definition 3.3 Probability Mass Function PMF**
-
-The probability mass function (PMF) of a discrete random variable $X$ is a function that assigns a probability to each value in the range of $X$
+**Definition 3.3 Probability Mass Function PMF**  The probability mass function (PMF) of a discrete random variable $X$ is a function that assigns a probability to each value in the range of $X$
 
 $$ P_X(x) = P[X = x] $$
 
