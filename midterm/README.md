@@ -2,6 +2,7 @@
 ## 1.  experiments, models, and probabilities
 
 **theorem 1.1** demorgan's law related all three basic operations 
+
 $$ (A \cup B)^c = (A^c \cap B^c) $$
 
 **theorem 1.2** for mutually exclusive events $A_1$ and $A_2$, 
