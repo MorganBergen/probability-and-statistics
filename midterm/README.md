@@ -301,73 +301,59 @@ $$ P[X \leq x_{med}] = 1/2, \space{} \space{}  P[X \geq x_{med}] = 1/2 $$
 
 $$ E[X] = \mu_{X} = \sum_{x \in S_X} x P_X(x) $$
 
-**Definition 3.14 Derived Random Variable**
+**Definition 3.14 Derived Random Variable**  Each sample value y of a derived random variable $Y$ is a mathematical function $g(x)$ of a sample value $x$ of another random variable $X$.  We adopt the notation  $Y = g(X)$ to describe the relationship of the two random variables.
 
-Each sample value y of a derived random variable $Y$ is a mathematical function $g(x)$ of a sample value $x$ of another random variable $X$.  We adopt the notation  $Y = g(X)$ to describe the relationship of the two random variables.
-
-**Definition 3.15 Variance**
-
-The variance of random variable $X$ is
+**Definition 3.15 Variance**  The variance of random variable $X$ is
 
 $$ Var[X] = \sigma^2_X = E[(X - \mu{X})^2] $$
 
-**Definition 3.16 Standard Deviation**
-
-The standard deviation of random variable $X$ is
+**Definition 3.16 Standard Deviation**  The standard deviation of random variable $X$ is
 
 $$ \sigma_X = \sqrt{Var[X]} $$
 
-**Definition 3.17 Moments**
+**Definition 3.17 Moments**  For random variable $X$
 
-For random variable $X$
+(a) The nth moment is $E[X^n]$
 
-$\text{(a) The nth moment is } E[X^n]$
-
-$\text{(b) The nth central moment is } E[(X - \mu_X)^n]$
+(b) The nth central moment is $E[(X - \mu_X)^n]$
 
 ## 4. Continuous Random Variables
 
 **Theorem 4.1** For any random variable $X$,
 
-$\text{(a) } F_X(-\infty) = 0$
+(a) $F_X(-\infty) = 0$
 
-$\text{(b) } F_X(\infty) = 1$
+(b) $F_X(\infty) = 1$
 
-$\text{(c) } P[x_1 < X ≤ x_2] = F_X(x_2) - F_X(x_1)$
+(c) $P[x_1 < X ≤ x_2] = F_X(x_2) - F_X(x_1)$
 
 **Theorem 4.2** For a continuous random variable $X$, with PMF $f_X(x)$,
 
-$\text{(a) } f_X(x) ≥ 0 \text{ for all x, } $
+(a) $f_X(x) ≥ 0 \text{ for all x, } $
 
-$\text{(b) } f_X(x) = \int_{-\infty}^{x} f_X(u) \space du, $
+(b) $f_X(x) = \int_{-\infty}^{x} f_X(u) \space du, $
 
-$\text{(c) } \int_{-\infty}^{\infty} f_X(x) dx = 1$
+(c) $\int_{-\infty}^{\infty} f_X(x) dx = 1$
 
 **Theorem 4.3** 
 
 $$ P[x_1 < X ≤ x_2] = \int_{x_1}^{x_2} f_X(x) dx $$
 
-**Theorem 4.4** 
-
-The expected value of a function, $g(X)$, of random variable $X$ is
+**Theorem 4.4**  The expected value of a function, $g(X)$, of random variable $X$ is
 
 $$ E[g(X)] = \int_{-\infty}^{\infty} g(x) f_X(x) dx $$
 
-**Theorem 4.5**
+**Theorem 4.5**  For any random variable $X$,
 
-For any random variable $X$,
+(a) $E[X - \mu{X} ] = 0 $
 
-$\text{(a) } E[X - \mu{X} ] = 0 $
+(b) $E[aX + b] = aE[X] + b $
 
-$\text{(b) } E[aX + b] = aE[X] + b $
+(c) $Var[X] = E[X^2] - {\mu{^2}}_X $
 
-$\text{(c) } Var[X] = E[X^2] - {\mu{^2}}_X $
+(d) $Var[aX + b] = a^2 Var[X] $
 
-$\text{(d) } Var[aX + b] = a^2 Var[X] $
-
-**Theorem 4.6**
-
-If $X$ is a uniform $(a, b)$ random variable,
+**Theorem 4.6**  If $X$ is a uniform $(a, b)$ random variable,
 
 - The CDF of $X$ is $$ F_X(x) = \begin{cases} 
             0 & x < a \\
@@ -403,10 +389,8 @@ $\text{(b) } Var[X] = {n\over{(\lambda)^2}} $
 **Theorem 4.11** Let $K_\alpha$ denote a Poisson ($\alpha$) random variable.  For any $x > 0$, the CDF of an Erlang $(n, \lambda)$ random variable $X$ satisfies,
 
 $$ F_X(x) = 1 - F_{K_\alpha}(n - 1) = \begin{cases} 
-
-            1 - \sum_{k = 0}^{n - 1} \frac{(\lambda x)^k e^{-\lambda x}}{k!} & x ≥ n \\
-            0 & otherwise \\
-
+1 - \sum_{k = 0}^{n - 1} \frac{(\lambda x)^k e^{-\lambda x}}{k!} & x ≥ n \\
+0 & otherwise \\
 \end{cases} $$
 
 **Theorem 4.12**  If $X$ is a Gaussian $(\mu, \sigma)$ random variable, then
