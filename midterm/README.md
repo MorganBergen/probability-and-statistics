@@ -355,11 +355,13 @@ $$ E[g(X)] = \int_{-\infty}^{\infty} g(x) f_X(x) dx $$
 
 **Theorem 4.6**  If $X$ is a uniform $(a, b)$ random variable,
 
-- The CDF of $X$ is $$ F_X(x) = \begin{cases} 
-            0 & x < a \\
-            {(x - a)}/{(b - a)} & a ≤ x ≤ b \\
-            1 & x > b \\
-            \end{cases} $$
+- The CDF of $X$ is 
+
+$$F_X(x) = \begin{cases} 
+0 & x < a \\
+{(x - a)}/{(b - a)} & a ≤ x ≤ b \\
+1 & x > b \\
+\end{cases} $$
 
 - The expected value of $X$ is $E[X] = {(a + b)}/{2} $
 
@@ -369,16 +371,18 @@ $$ E[g(X)] = \int_{-\infty}^{\infty} g(x) f_X(x) dx $$
 
 **Theorem 4.8** If $X$ is an exponential $(\lambda)$ random variable,
 
-- The CDF of $X$ is $ F_X(x) = \begin{cases} 
-            1 - e^{-\lambda x} & x ≥ 0 \\
-            0 & otherwise \\
-            \end{cases} $
+- The CDF of $X$ is 
+
+$$F_X(x) = \begin{cases} 
+1 - e^{-\lambda x} & x ≥ 0 \\
+0 & otherwise \\
+\end{cases}$$
 
 - The expected value of $X$ is $E[X] = {1}/{\lambda} $
 
 - The variance of $X$ is $Var[X] = {1}/{\lambda^2} $
 
-**Theorem 4.9** If $X$ is an exponential $(\lambda)$ random variable, then $K = \lceil X \rceil$ is a geometric (p) random variable with $ p = 1 - e^{-\lambda} $
+**Theorem 4.9** If $X$ is an exponential $(\lambda)$ random variable, then $K = \lceil X \rceil$ is a geometric $(p)$ random variable with $p = 1 - e^{-\lambda}$
 
 **Theorem 4.10** If $X$ is an Erlang $(n, \lambda)$ random variable, then 
 
@@ -386,7 +390,7 @@ $\text{(a) } E[X] = {n\over{(\lambda)}} $
 
 $\text{(b) } Var[X] = {n\over{(\lambda)^2}} $
 
-**Theorem 4.11** Let $K_\alpha$ denote a Poisson ($\alpha$) random variable.  For any $x > 0$, the CDF of an Erlang $(n, \lambda)$ random variable $X$ satisfies,
+**Theorem 4.11** Let $K_\alpha$ denote a Poisson $\alpha$ random variable.  For any $x > 0$, the CDF of an Erlang $(n, \lambda)$ random variable $X$ satisfies,
 
 $$ F_X(x) = 1 - F_{K_\alpha}(n - 1) = \begin{cases} 
 1 - \sum_{k = 0}^{n - 1} \frac{(\lambda x)^k e^{-\lambda x}}{k!} & x ≥ n \\
@@ -397,7 +401,7 @@ $$ F_X(x) = 1 - F_{K_\alpha}(n - 1) = \begin{cases}
 
 $$ E[X] = \mu \space \space \space \space \space \space \space \space \space \space \space \space Var[X] = \sigma^2 $$
 
-**Theorem 4.13** If $X$ is a Gaussian $(\mu, \sigma), Y = aX + b $  is Gaussian $(a\mu + b, a\sigma)$
+**Theorem 4.13** If $X$ is a Gaussian $(\mu, \sigma), Y = aX + b$  is Gaussian $(a\mu + b, a\sigma)$
 
 **Theorem 4.14** If $X$ is a Gaussian $(\mu, \sigma)$ random variable, the CDF of $X$ is 
 
@@ -417,13 +421,13 @@ $$ \int_{-\infty}^{\infty} g(x) \delta(x - x_0) dx = g(x_0) $$
 
 **Theorem 4.18** For a random variable $X$, we have the folloing equivalent statements:
 
-$\text{(a) } P[X = x_0] = q $
+$\text{(a) } P[X = x_0] = q$
 
-$\text{(b) } P[x_0] = q $
+$\text{(b) } P[x_0] = q$
 
-$\text{(c) } F_X(x_{0}^+) - F_X(x_{0}^-) = q $
+$\text{(c) } F_X(x_{0}^+) - F_X(x_{0}^-) = q$
 
-$ \text{(d) } f_x(x_0) = q \delta(0) $
+$\text{(d) } f_x(x_0) = q \delta(0)$
 
 **Definition 4.1 Cumulative Distribution Function (CDF)** The cumulative distribution function (CDF) of random variable $X$ is $F_X(x) = P[X ≤ x]$
 
