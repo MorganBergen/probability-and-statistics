@@ -281,7 +281,6 @@ where the parameters k and l are integers such that $k < l.$
 **Definition 3.9 Poisson $(\alpha)$ Random Variable**  $X$ is a Poisson $(\alpha)$ random variable if the PMF of X has the form
 
 $$ P_X(x) = \begin{cases} 
-
 {{\alpha^x e^{-\alpha}}/{x!}} \space & x = 0, 1, 2,\dots , \\ 
 0 & \space \text{otherwise} \\
 \end{cases} $$
