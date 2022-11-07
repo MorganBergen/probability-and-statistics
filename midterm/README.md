@@ -392,3 +392,12 @@ $\text{For random variable X: }$
 $\text{(a) The nth moment is } E[X^n]$
 
 $\text{(b) The nth central moment is } E[(X - \mu_X)^n]$
+
+**Theorem 4.1** For any random variable $X$,
+
+$\text{(a) } F_X(-\infty) = 0$
+
+$\text{(b) } F_X(\infty) = 1$
+
+$\text{(c) } P[x_1 < X ≤ x_2] = F_X(x_2) - F_X(x_1)$
+
