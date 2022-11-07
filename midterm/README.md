@@ -17,15 +17,15 @@ $$ P[A] = \sum_{i=1}^m P[A_i] $$
 
 **theorem 1.4** The probability measure $P[.]$ is a function that satisfies the following properties:
 
-$ P[\emptyset] = 0 $
-
-$ P[A^c] = 1 - P[A] $
+$$ P[\emptyset] = 0 \\
+      
+P[A^c] = 1 - P[A] $$
 
 For any A and B (not necessarily mutually exclusive), 
 
-$ P[A \cup B] = P[A] + P[B] - P[A \cap B] $
+$$ P[A \cup B] = P[A] + P[B] - P[A \cap B] \\ 
 
-$ \text{for} A \subset B,$ $then$ $P[A] \leq P[B] $
+A \subset B, P[A] \leq P[B] $$
 
 **Theorem 1.5** The probability of an event $ B = {s_1, s_2, \cdots, s_m} $ is the sum of the probabilities of the outcomes contained in the event:
 
