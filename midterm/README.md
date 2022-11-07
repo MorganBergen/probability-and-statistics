@@ -282,10 +282,9 @@ where the parameters k and l are integers such that $k < l.$
 
 $$ P_X(x) = \begin{cases} 
 
-      {{\alpha^x e^{-\alpha}}/{x!}} \space & x = 0, 1, 2,\dots , \\ 
-      0 & \space \text{otherwise} \\
-
-      \end{cases} $$
+{{\alpha^x e^{-\alpha}}/{x!}} \space & x = 0, 1, 2,\dots , \\ 
+0 & \space \text{otherwise} \\
+\end{cases} $$
 
 where the parameter $\alpha$ is in the range $\alpha > 0$
 
