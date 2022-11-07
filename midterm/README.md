@@ -267,5 +267,123 @@ $ \text{(f) If X is discrete uniform (k, l), then } \space{  }  Var[X] = (l - k)
 
 **Definition 3.1 Random Variable**
 
+$$ \text{A random variable consists of an experiment with a probability measure P[.] defined on a sample space S and a function that assigns a real number to each outcome in the sample spacce of the experiment.}$$
 
-$\text{A random variable consists of an experiment with a probability measure P[.] defined on a sample space S and a function that assigns a real number to each outcome in the sample spacce of the experiment.}$
+**Definition 3.2 Discrete Random Variable**
+
+$\text{X is a discrete random variable if the range of X is a countable set.}$
+
+$$ S_X = \{ x_1, x_2, \dots \} $$
+
+**Definition 3.3 Probability Mass Function PMF**
+
+$\text{The probability mass function (PMF) of a discrete random variable X is a function that assigns a probability to each value in the range of X.}$
+
+$$ P_X(x) = P[X = x] $$
+
+**Definition 3.4 Bernoulii (p) Random Variable**
+
+$\text{X is a Bernoulli (p) random variable if the PMF of X has the form }$
+
+$$ {P_X(x)} = \begin{cases}
+            {1-p} & x = 0 \\
+            {p} & x = 1 \\
+            0 & \text{otherwise} \\  
+            \end{cases} $$
+
+$\text{where the parameter p is on the range } 0 < p < 1 $
+
+**Definition 3.5 Geometric (p) Random Variable**
+
+$\text{X is a geometric (p) random variable if the PMF of X has the form }$
+
+$$ {P_X(x)} = \begin{cases}
+            {p(1-p)^{x-1}} & x = 1, 2, 3, \dots \\
+            0 & \text{otherwise} \\  
+            \end{cases} $$
+
+$\text{where the parameter p is on the range } 0 < p < 1 $
+
+**Definition 3.6 Binomial $\text{(n, p)}$ Random Variable**
+
+$\text{X is a binomial (n, p) random variable if the PMF of X has the form }$
+
+$$ P_X(s) = {n \choose x} p^x (1-p)^{n-x} $$
+
+$\text{where } 0 < p < 1 \text{and n is an integer such that } n ≥ 1 $
+
+**Definition 3.7 Pascal $\text{(k, p)}$ Random Variable**
+
+$$ P_X(x) = {{x-1} \choose {k-1}} p^k (1-p)^{x-k} $$
+
+$\text{where } 0 < p < 1 \text{ and k is an integer such that } k ≥ 1 $
+
+**Definition 3.8 Discrete Uniform $\text{(k, l)}$ Random Variable**
+
+$\text{X is a discrete uniform (k, l) random variable if the PMF of X has the form }$
+
+$$ {P_X(x)} = \begin{cases} 
+            {1}/{(l - k + 1)} & x = k, k + 1, k + 2 , ... \space , l \\
+            0 & \text{otherwise} \\
+            \end{cases} $$
+
+$\text{where the parameters k and l are integers such that } k < l. $
+
+**Definition 3.9 Poisson $(\alpha)$ Random Variable**
+
+$\text{X is a Poisson} (\alpha) \text{random variable if the PMF of X has the form } $
+
+$$ P_X(x) = \begin{cases} 
+
+      {{\alpha^x e^{-\alpha}}/{x!}} \space & x = 0, 1, 2,\dots , \\ 
+      0 & \space \text{otherwise} \\
+
+      \end{cases} $$
+
+$\text{where the parameter } \alpha \text{ is in the range } \alpha > 0$
+
+**Definition 3.10 Cumulative Distribution Function (CDF)**
+
+$\text{The cumulative distribution function (CDF) of a discrete random variable X is a function that assigns a probability to each value in the range of X.}$
+
+$$ F_X(x) = P[X \leq x] $$
+
+**Definition 3.11 Mode**
+
+$\text{A mode of random variable X is a number } x_mod \text{ satisfying } P_X(x_mod) ≥ P_X(x) \text{ for all } x $
+
+**Definition 3.12 Median**
+
+$\text{A median, } x_med \text{, of random variable X is a number that satisfies }$
+
+$$ P[X \leq x_{med}] = 1/2, \space{} \space{}  P[X \geq x_{med}] = 1/2 $$
+
+**Definition 3.13 Expected Value**
+
+$\text{The expected value of X is }$
+
+$$ E[X] = \mu_{X} = \sum_{x \in S_X} x P_X(x) $$
+
+**Definition 3.14 Derived Random Variable**
+
+$\text{Each sample value y of a derived random variable Y is a mathematical function g(x) of a sample value x of another random variable X.  We adopt the notation } Y = g(X) \text{ to describe the relationship of the two random variables.}$
+
+**Definition 3.15 Variance**
+
+$\text{The variance of random variable X is }$
+
+$$ Var[X] = \sigma^2_X = E[(X - \mu{X})^2] $$
+
+**Definition 3.16 Standard Deviation**
+
+$\text{The standard deviation of random variable X is }$
+
+$$ \sigma_X = \sqrt{Var[X]} $$
+
+**Definition 3.17 Moments**
+
+$\text{For random variable X: }$
+
+$\text{(a) The nth moment is } E[X^n]$
+
+$\text{(b) The nth central moment is } E[(X - \mu_X)^n]$
