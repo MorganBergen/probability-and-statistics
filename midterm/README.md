@@ -1,17 +1,11 @@
 # probability and stochastic processes
 ## 1.  experiments, models, and probabilities
 
-**theorem 1.1** demorgan's law related all three basic operations 
+**theorem 1.1** demorgan's law related all three basic operations $(A \cup B)^c = (A^c \cap B^c)$
 
-$$ (A \cup B)^c = (A^c \cap B^c) $$
+**theorem 1.2** for mutually exclusive events $A_1$ and $A_2$, $P[A_1 \cup A_2] = P[A_1] + P[A_2]$
 
-**theorem 1.2** for mutually exclusive events $A_1$ and $A_2$, 
-
-$$ P[A_1 \cup A_2] = P[A_1] + P[A_2] $$
-
-**theorem 1.3** 
-
-$$ \text{If } A = A_1 \cup A_2 \cup \cdots \cup A_m \text{ and }  A_i \cap A_j = \emptyset \text { for all } i \neq j \text{ , then } $$
+**theorem 1.3** $text{If } A = A_1 \cup A_2 \cup \cdots \cup A_m \text{ and }  A_i \cap A_j = \emptyset \text { for all } i \neq j \text{ , then }$
 
 $$ P[A] = \sum_{i=1}^m P[A_i] $$
 
