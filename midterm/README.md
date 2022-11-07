@@ -147,7 +147,7 @@ $\text{(a) For any x,} \space P_X(x) ≥ 0$
 
 $\text{(b) } \sum_{x \in S_x} P_X(x) = 1$
 
-$\text{(c) For any event} $ $B \subset S_x, \space \text{The probability that X is in the set B is }$
+$\text{(c) For any event} B \subset S_x, \space \text{The probability that X is in the set B is }$
 
 $$P[B] = \sum_{x \in B} P_X(x)$$
 
@@ -238,9 +238,7 @@ $$ S_X = \{ x_1, x_2, \dots \} $$
 
 $$ P_X(x) = P[X = x] $$
 
-**Definition 3.4 Bernoulii (p) Random Variable**
-
-$\text{X is a Bernoulli (p) random variable if the PMF of X has the form }$
+**Definition 3.4 Bernoulii (p) Random Variable** $X$ is a Bernoulli $(p)$ random variable if the PMF of X has the form
 
 $$ {P_X(x)} = \begin{cases}
             {1-p} & x = 0 \\
@@ -250,45 +248,37 @@ $$ {P_X(x)} = \begin{cases}
 
 $\text{where the parameter p is on the range } 0 < p < 1 $
 
-**Definition 3.5 Geometric (p) Random Variable**
-
-$\text{X is a geometric (p) random variable if the PMF of X has the form }$
+**Definition 3.5 Geometric (p) Random Variable** $X$ is a geometric $(p)$ random variable if the PMF of $X$ has the form
 
 $$ {P_X(x)} = \begin{cases}
             {p(1-p)^{x-1}} & x = 1, 2, 3, \dots \\
             0 & \text{otherwise} \\  
             \end{cases} $$
 
-$\text{where the parameter p is on the range } 0 < p < 1 $
+where the parameter p is on the range $0 < p < 1$
 
-**Definition 3.6 Binomial $\text{(n, p)}$ Random Variable**
-
-$\text{X is a binomial (n, p) random variable if the PMF of X has the form }$
+**Definition 3.6 Binomial $\text{(n, p)}$ Random Variable** X is a binomial (n, p) random variable if the PMF of X has the form
 
 $$ P_X(s) = {n \choose x} p^x (1-p)^{n-x} $$
 
-$\text{where } 0 < p < 1 \text{and n is an integer such that } n ≥ 1 $
+where $0 < p < 1$ and n is an integer such that $n ≥ 1$
 
 **Definition 3.7 Pascal $\text{(k, p)}$ Random Variable**
 
 $$ P_X(x) = {{x-1} \choose {k-1}} p^k (1-p)^{x-k} $$
 
-$\text{where } 0 < p < 1 \text{ and k is an integer such that } k ≥ 1 $
+where $0 < p < 1$ and k is an integer such that $k ≥ 1$
 
-**Definition 3.8 Discrete Uniform $\text{(k, l)}$ Random Variable**
-
-$\text{X is a discrete uniform (k, l) random variable if the PMF of X has the form }$
+**Definition 3.8 Discrete Uniform $\text{(k, l)}$ Random Variable**  $X$ is a discrete uniform $(k, l)$ random variable if the PMF of X has the form
 
 $$ {P_X(x)} = \begin{cases} 
             {1}/{(l - k + 1)} & x = k, k + 1, k + 2 , ... \space , l \\
             0 & \text{otherwise} \\
             \end{cases} $$
 
-$\text{where the parameters k and l are integers such that } k < l. $
+where the parameters k and l are integers such that $k < l.$
 
-**Definition 3.9 Poisson $(\alpha)$ Random Variable**
-
-$\text{X is a Poisson} (\alpha) \text{random variable if the PMF of X has the form } $
+**Definition 3.9 Poisson $(\alpha)$ Random Variable**  $X$ is a Poisson $(\alpha)$ random variable if the PMF of X has the form
 
 $$ P_X(x) = \begin{cases} 
 
@@ -297,27 +287,19 @@ $$ P_X(x) = \begin{cases}
 
       \end{cases} $$
 
-$\text{where the parameter } \alpha \text{ is in the range } \alpha > 0$
+where the parameter $\alpha$ is in the range $\alpha > 0$
 
-**Definition 3.10 Cumulative Distribution Function (CDF)**
-
-The cumulative distribution function (CDF) of a discrete random variable $X$ is a function that assigns a probability to each value in the range of $X$.
+**Definition 3.10 Cumulative Distribution Function (CDF)**  The cumulative distribution function (CDF) of a discrete random variable $X$ is a function that assigns a probability to each value in the range of $X$.
 
 $$ F_X(x) = P[X \leq x] $$
 
-**Definition 3.11 Mode**
+**Definition 3.11 Mode**  A mode of random variable $X$ is a number $x_{mod}$ satisfying $P_X(x_{mod}) ≥ P_X(x)$ for all $x$
 
-$\text{A mode of random variable X is a number } x_mod \text{ satisfying } P_X(x_mod) ≥ P_X(x) \text{ for all } x $
-
-**Definition 3.12 Median**
-
-$\text{A median, } x_{med} \text{, of random variable X is a number that satisfies }$
+**Definition 3.12 Median**  A median $x_{med}$ of random variable $X$ is a number that satisfies
 
 $$ P[X \leq x_{med}] = 1/2, \space{} \space{}  P[X \geq x_{med}] = 1/2 $$
 
-**Definition 3.13 Expected Value**
-
-$\text{The expected value of X is }$
+**Definition 3.13 Expected Value**  The expected value of $X$ is
 
 $$ E[X] = \mu_{X} = \sum_{x \in S_X} x P_X(x) $$
 
