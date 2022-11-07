@@ -1,5 +1,7 @@
 # probability and stochastic processes
 
+[link](https://www.youtube.com/watch?v=vfqPpai_9jI&list=PLUl4u3cNGP60hI9ATjSFgLZpbNJ7myAg6&index=50)
+
 ## 1.  experiments, models, and probabilities
 
 **theorem 1.1** demorgan's law related all three basic operations $ (A \cup B)^c = (A^c \cap B^c) \\ $
@@ -170,9 +172,100 @@ $$P[B] = \sum_{x \in B} P_X(x)$$
 
 $\text{For any discrete random variable X with range} \space S_x = \{ x_1, x_2, \dots \}  \space \text{satisfying} \space x_1 ≤ x_2 ≤ \dots $,
 
-$\text{(a)} F_X=(-\infty) = 0 \space \text{and} \space F_X(\infty) = 1 $
+$\text{(a) } F_X=(-\infty) = 0 \space \text{and} \space F_X(\infty) = 1 $
 
 $\text{(b) For all } x' ≥ x, F_X(x') ≥ F_X(x) $
 
 $\text{(c) For all } x' > x, F_X(x') > F_X(x) $
 
+$\text{(d) } F_X(x) = F_X(x_i) \text{for all x such that } x_i ≤ x ≤ x_{i+1} $
+
+
+**Theorem 3.3**  
+
+$ \text{For all b > a, } F_X(b) - F_X(a) = P[a < X ≤ b] $
+
+**Theorem 3.4**
+
+$ \text{The Bernoulli (p) random variable X has expected value } E[X] = p $
+
+**Theorem 3.5**
+
+$ \text{The geometirc (p) random variable X has expect value E[X] = 1/p} $
+
+**Theorem 3.6**
+
+$ \text{(a) For the binomial (n, p) random variable X of Definition 3.6} $
+
+$$ E[X] = np \space $$
+
+$ \text{(b) For the Pascal (k, p) random variable X of Definition 3.7} $
+
+$$ E[X] = k/p $$
+
+$ \text{(c) For the discrete uniform (k, l) random variable X of Definition 3.8} $
+
+$$ E[X] = \frac{k + l}{2} $$
+
+**Theorem 3.8**
+
+$ \text{Perfom n Bernoulli trials.  In each trial, let the probability of success be } {\alpha} / n, \text{where } {\alpha} > 0 \text{is a constant and } n >\alpha.$
+
+$\text{  Let the random variable } K_n \text{ be the number of successes in the n trials.  As } n \rightarrow \infty, P_{K_n}(k) \text{ converges to the PMF of a Poisson } (\alpha) \text{random variable. }$
+
+**Theorem 3.9**
+
+$ \text{For a discrete random variable X, the PMF of Y = g(X) is}$
+
+$$ P_Y(y) = \sum_{x: g(x) = y} P_X(x) $$
+
+**Theorem 3.10**
+
+$ \text{Given a random variable X with PMF } P_X(x), \text{ and the derived random variable} Y = g(x), \text{ the expected value of Y is }$
+
+$$ E[Y] = \mu_Y = \sum_{x \in S_x} g(x) P_X(x)  $$
+
+**Theorem 3.11**
+
+$ \text{For any random variable X, } $
+
+$$ E[X - \mu_{X}] = 0 $$
+
+**Theorem 3.12**
+
+$ \text{For any random variable X, }$
+
+$$ E[aX + b] = aE[X] + b $$
+
+**Theorem 3.13**
+
+$ \text{In the absence of observations, the minimum mean square error estimate random variable X is} $
+
+$$ \hat x = E[X] $$
+
+**Theorem 3.14**
+
+$$ Var[X] = E[X^2] - \mu^2_X = E[X^2] - (E[X])^2 $$
+
+**Theorem 3.15**
+
+$$ Var[aX + b] = a^2 Var[X] $$
+
+**Theorem 3.16**
+
+$ \text{(a) If X is Bernoiulli (p), then } \space{  } Var[X] = p(1-p) $
+
+$ \text{(b) If X is geometric (p), then } \space{  } Var[X] = ({1-p})/{p^2} $
+
+$ \text{(c) If X is binomial (n, p), then } \space{  }  Var[X] = np(1 - p) $
+
+$ \text{(d) If X is Pascal (k, p), then } \space{  }  Var[X] = k(1 - p)/p^2 $
+
+$ \text{(e) If X is Poisson } (\alpha) \text{, then} \space{  }  Var[X] = \alpha $
+
+$ \text{(f) If X is discrete uniform (k, l), then } \space{  }  Var[X] = (l - k)(l - k + 2)/12 $
+
+**Definition 3.1 Random Variable**
+
+
+$\text{A random variable consists of an experiment with a probability measure P[.] defined on a sample space S and a function that assigns a real number to each outcome in the sample spacce of the experiment.}$
