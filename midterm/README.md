@@ -17,9 +17,9 @@ $$ P[A] = \sum_{i=1}^m P[A_i] $$
 
 **theorem 1.4** The probability measure $P[.]$ is a function that satisfies the following properties:
 
-$$ P[\emptyset] = 0 \\
+$P[\emptyset] = 0$
       
-P[A^c] = 1 - P[A] $$
+$P[A^c] = 1 - P[A]$
 
 For any A and B (not necessarily mutually exclusive), 
 
