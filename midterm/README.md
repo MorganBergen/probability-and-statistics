@@ -29,25 +29,25 @@ $$ P[A] = \sum_{i=1}^m P[A_i] $$
 
 $$ P[B] = \sum_{i=1}^m P[{s_i}] $$
 
-**theorem 1.6** For an experiment with sample space $ S = {s_1, s_2, \cdots, s_n} $ in which each outcomes $s_i$ is equally likely, 
+**theorem 1.6** For an experiment with sample space $S = {s_1, s_2, \cdots, s_n}$ in which each outcomes $s_i$ is equally likely, 
 
-$$ P[{s_i}] = \frac{1}{n}  \space \space \space  1 ≤ i ≤ n  $$ 
+$$P[{s_i}] = \frac{1}{n}  \space \space \space  1 ≤ i ≤ n$$ 
 
-**theroem 1.7** A conditional probability measure $ P[A|B] $ has the following properties that correspond to the axioms of probability:
+**theroem 1.7** A conditional probability measure $P[A|B]$ has the following properties that correspond to the axioms of probability:
 
-Axiom 1: $ P[A|B] \geq 0 $
+Axiom 1: $P[A|B] \geq 0$
 
-Axiom 2: $ P[B|B] = 1 $
+Axiom 2: $P[B|B] = 1$
 
-Axiom 3: If $ A = A_1 \cup A_2 \cup \cdots \cup A_m $ and $ A_i \cap A_j = \emptyset $ for all $ i \neq j $, then 
+Axiom 3: If $A = A_1 \cup A_2 \cup \cdots \cup A_m$ and $A_i \cap A_j = \emptyset$ for all $i \neq j$, then 
 
-$$ P[A|B] = P[A_1|B] + P[A_2|B] + \cdots + P[A_m|B] $$
+$$P[A|B] = P[A_1|B] + P[A_2|B] + \cdots + P[A_m|B]$$
 
-**Theorem 1.8**   For a partition $ B = {B_1, B_2, \cdots, B_m} $ and any event $A$ in the sample space, let $ C_i = A \cap B_i $ For $ i ≠ j $, the events $ C_i $ and $ C_j $ are mutually exclusive and $ A = C_1 \cup C_2 \cup \cdots $
+**Theorem 1.8**   For a partition $B = {B_1, B_2, \cdots, B_m}$ and any event $A$ in the sample space, let $C_i = A \cap B_i$ For $i ≠ j$, the events $C_i$ and $C_j$ are mutually exclusive and $A = C_1 \cup C_2 \cup \cdots$
 
-**Theorem 1.9**  For any event $ A $ and partition $ {B_1, B_2, \cdots, B_m} $ 
+**Theorem 1.9**  For any event $A$ and partition ${B_1, B_2, \cdots, B_m}$ 
 
-$$ P[A] = \sum_{i=1}^m P[A \cap B_i $$
+$$P[A] = \sum_{i=1}^m P[A \cap B_i$$
 
 **Theorem 1.10**  Law of total probability
 
