@@ -401,3 +401,14 @@ $\text{(b) } F_X(\infty) = 1$
 
 $\text{(c) } P[x_1 < X ≤ x_2] = F_X(x_2) - F_X(x_1)$
 
+**Theorem 4.2** For a continuous random variable $X$, with PMF $f_X(x)$,
+
+$\text{(a) } f_X(x) ≥ 0 \text{ for all x, } $
+
+$\text{(b) } f_X(x) = \int_{-\infty}^{x} f_X(u) \space du, $
+
+$\text{(c) } \int_{-\infty}^{\infty} f_X(x) dx = 1$
+
+**Theorem 4.3** 
+
+
