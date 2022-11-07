@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>README.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="probability-and-stochastic-processes">probability and stochastic processes</h1>
+<h2 id="1-experiments-models-and-probabilities">1.  experiments, models, and probabilities</h2>
+<p><strong>theorem 1.1</strong> demorgan's law related all three basic operations $(A \cup B)^c = (A^c \cap B^c)$</p>
+<p><strong>theorem 1.2</strong> for mutually exclusive events $A_1$ and $A_2$, $P[A_1 \cup A_2] = P[A_1] + P[A_2]$</p>
+<p><strong>theorem 1.3</strong> $text{If } A = A_1 \cup A_2 \cup \cdots \cup A_m \text{ and }  A_i \cap A_j = \emptyset \text { for all } i \neq j \text{ , then }$</p>
+<p>$$ P[A] = \sum_{i=1}^m P[A_i] $$</p>
+<p><strong>theorem 1.4</strong> The probability measure $P[.]$ is a function that satisfies the following properties:</p>
+<ul>
+<li>
+<p>$P[\emptyset] = 0$</p>
+</li>
+<li>
+<p>$P[A^c] = 1 - P[A]$</p>
+</li>
+<li>
+<p>For any A and B (not necessarily mutually exclusive), $P[A \cup B] = P[A] + P[B] - P[A \cap B]$</p>
+</li>
+<li>
+<p>$A \subset B, P[A] \leq P[B]$</p>
+</li>
+</ul>
+<p><strong>Theorem 1.5</strong> The probability of an event $B = {s_1, s_2, \cdots, s_m}$ is the sum of the probabilities of the outcomes contained in the event:</p>
+<p>$$ P[B] = \sum_{i=1}^m P[{s_i}] $$</p>
+<p><strong>theorem 1.6</strong> For an experiment with sample space $S = {s_1, s_2, \cdots, s_n}$ in which each outcomes $s_i$ is equally likely,</p>
+<p>$$P[{s_i}] = \frac{1}{n}  \space \space \space  1 ≤ i ≤ n$$</p>
+<p><strong>theroem 1.7</strong> A conditional probability measure $P[A|B]$ has the following properties that correspond to the axioms of probability:</p>
+<p>Axiom 1: $P[A|B] \geq 0$</p>
+<p>Axiom 2: $P[B|B] = 1$</p>
+<p>Axiom 3: If $A = A_1 \cup A_2 \cup \cdots \cup A_m$ and $A_i \cap A_j = \emptyset$ for all $i \neq j$, then</p>
+<p>$$P[A|B] = P[A_1|B] + P[A_2|B] + \cdots + P[A_m|B]$$</p>
+<p><strong>Theorem 1.8</strong>   For a partition $B = {B_1, B_2, \cdots, B_m}$ and any event $A$ in the sample space, let $C_i = A \cap B_i$ For $i ≠ j$, the events $C_i$ and $C_j$ are mutually exclusive and $A = C_1 \cup C_2 \cup \cdots$</p>
+<p><strong>Theorem 1.9</strong>  For any event $A$ and partition ${B_1, B_2, \cdots, B_m}$</p>
+<p>$$P[A] = \sum_{i=1}^m P[A \cap B_i$$</p>
+<p><strong>Theorem 1.10</strong>  Law of total probability</p>
+<p>For a partition ${ B_1, B_2, \cdots, B_m }$ with $P[B_i] &gt; 0$ for all $i$,</p>
+<p>$$ P[A] = \sum_{i=1}^m P[A|B_i] P[B_i] $$</p>
+<p><strong>Theorem 1.11</strong>  Bayes' theorem</p>
+<p>$$ P[B|A] = \frac{P[A|B] P[B]}{P[A]} $$</p>
+<p><strong>Definition 1.1 Outcome</strong> An outcome of an experiment is a possible result of the experiment.</p>
+<p><strong>Definition 1.2 Sample space</strong> The sample space of an experiment is the finest-grain, mutually exclusive, collectively exhaustive set of all possible outcomes of the experiment.</p>
+<p><strong>Definition 1.3 Event</strong> An event is a subset of the sample space.</p>
+<p><strong>Definition 1.4 Axioms of Probability</strong> A probability measure $P[.]$ is a function that maps events in the sample spacce to real numbers such that</p>
+<p><strong>Axiom 1</strong> For any event $A$, $P[A] \geq 0$</p>
+<p><strong>Axiom 2</strong> $P[S] = 1$</p>
+<p><strong>Axiom 3</strong> For any countable collection $A_1, A_2, \cdots$ of mutually exclusive events,</p>
+<p>$$ P[A_1 \cup A_2 \cup \cdots] = P[A_1] + P[A_2] + \cdots $$</p>
+<p><strong>Definition 1.5 Conditional probability</strong> The conditional probability of an event $A$ given the occurance of the event B is</p>
+<p>$$ P[A|B] = {P[AB] \over P[B]}$$</p>
+<p>Conditional probability is defined only when $P[B] &gt; 0$.</p>
+<p><strong>Definition 1.6 Two independent events</strong> Two events $A$ and $B$ are independent if</p>
+<p>$$ P[AB] = P[A]P[B] $$</p>
+<p><strong>Definition 1.7 Three Independent Events</strong> $A_1, A_2, A_3$ are mutually exclusive and independent if and only if</p>
+<p>(a) $A_1$ and $A_2$ are independent</p>
+<p>(b) $A_2$ and $A_3$ are independent</p>
+<p>(c) $A_1$ and $A_3$ are independent</p>
+<p>(d) $P[A_1 \cap A_2 \cap A_3] = P[A_1]P[A_2]P[A_3]$</p>
+<p><strong>Definition 1.8 More than Two Independent Events</strong></p>
+<p>If $n ≥ 3$ events $A_1, A_2, \cdots, A_n$ are mutually independent if an only if</p>
+<p>(a) all collections of $n - 1$ events chosen from $A_1, A_2, \cdots, A_n$ are mutually independent,</p>
+<p>(b) $P[A_1 \cap A_2 \cap \cdots \cap A_n] = P[A_1]P[A_2] \cdots P[A_n]$</p>
+<h2 id="2-sequential-experiments">2.  Sequential Experiments</h2>
+<p><strong>Theorem 2.1</strong>  An experiment consists of two subexperiments.  If one subexperiment has $k$ outcomes and the other has $n$ outcomes, then the experiment has $kn$ outcomes.</p>
+<p><strong>Theorem 2.2</strong>  The number of k-permutations of $n$ distinguishable objects is</p>
+<p>$$ {n \choose k} = {(n)_k \over k! } = {n! \over {k! (n - k)!}}$$</p>
+<p><strong>Theorem 2.4</strong>  Given $m$ distinguishable objects, there are $m^n$ ways to choose ith replacement an ordered sample of n objects.</p>
+<p><strong>Theorem 2.5</strong>  For $n$ repitions of a subexperiment with sample space $S_sub = {s_1, s_2, \cdots, s_m-1}$, the sample space $S$ of the sequential experiment has $m^n$ outcomes.</p>
+<p><strong>Theorem 2.6</strong>  The number of observation sequences for $n$ subexperiments with sample space $S = {0,1}$ with $0$ appearing $n_0$ times and $1$ appearing $n_1 = n - n_0$ times is $n \choose n_1$.</p>
+<p><strong>Theorem 2.7</strong>  For n reptitions of a subexperiment with sample space $S = {s_0, s_1, \cdots, s_m-1}$, the number of length $n = n_0 + n_1 + \cdots + n_{m-1}$ observation sequences with $s_i$ appearing $n_i$ times is</p>
+<p>$$ {n \choose n_0, n_1, \cdots, n_{m-1}} = {n! \over {n_0! n_1! \cdots n_{m-1}!}} $$</p>
+<p><strong>Theorem 2.8</strong>  The probability of $n_0$ failures and $n_1$ successes in $n = n_0 + n_1$ independent trials is</p>
+<p>$$ P[E_{n_0, n_1}] = {n \choose n_1} (1-p)^{n-n_1} p^n_1 = {n \choose n_0} (1-p)^{n_0} p^{n - n_0} $$</p>
+<p><strong>Theorem 2.9</strong>  A subexperiment has sample space $S = {s_0, s_1, \cdots, s_m-1}$ with $P[s_i] = p_i$ for $n = n_0 + n_1 + \cdots + n_{m-1}$ independent trials, the probability of $n_i$ occurrences of $s_i$, $i = 0, 1, \cdots, m-1$ is</p>
+<p>$$ P[E_{n_0, n_1, \cdots, n_{m-1}}] = {n \choose n_0, n_1, \cdots, n_{m-1}} p_0^{n_0} p_1^{n_1} \cdots p_{m-1}^{n_{m-1}} $$</p>
+<p><strong>Definition 2.1 $n$ choose $k$</strong>   For an integer $n ≥ 0$, we define</p>
+<p>$$ {n \choose k} = \begin{cases}
+{n! \over {k! (n - k)!}} &amp; k = 0, 1, \dots, n, \
+0 &amp; \text{otherwise} \  \end{cases} $$</p>
+<p><strong>Definition 2.2 Multinomial coefficient</strong>  $\space \text{For an integer n ≥ 0, we define }$</p>
+<p>$${n \choose n_0, n_1, \dots, n_{m-1}} = {n! \over {n_0! n_1! \cdots n_{m-1}!}}$$</p>
+<h2 id="3-discrete-random-variables">3. Discrete Random Variables</h2>
+<p><strong>Theorem 3.1</strong> For a discrete random variable X with PMF $P_X(x)$ and range $S_X: $</p>
+<p>$\text{(a) For any x,} \space P_X(x) ≥ 0$</p>
+<p>$\text{(b) } \sum_{x \in S_x} P_X(x) = 1$</p>
+<p>$\text{(c) For any event} B \subset S_x, \space \text{The probability that X is in the set B is }$</p>
+<p>$$P[B] = \sum_{x \in B} P_X(x)$$</p>
+<p><strong>Theorem 3.2</strong>  For any discrete random variable $X$ with range $S_x = { x_1, x_2, \dots }$ satisfying $x_1 ≤ x_2 ≤ \dots $,</p>
+<p>$\text{(a) } F_X=(-\infty) = 0 \space \text{and} \space F_X(\infty) = 1 $</p>
+<p>$\text{(b) For all } x' ≥ x, F_X(x') ≥ F_X(x) $</p>
+<p>$\text{(c) For all } x' &gt; x, F_X(x') &gt; F_X(x) $</p>
+<p>$\text{(d) } F_X(x) = F_X(x_i) \text{for all x such that } x_i ≤ x ≤ x_{i+1} $</p>
+<p><strong>Theorem 3.3</strong>  For all $b &gt; a$, $F_X(b) - F_X(a) = P[a &lt; X ≤ b] $</p>
+<p><strong>Theorem 3.4</strong><input type="checkbox" id="checkbox0" checked="true"><label for="checkbox0">= p$</label></p>
+<p><strong>Theorem 3.5</strong><input type="checkbox" id="checkbox1" checked="true"><label for="checkbox1">= 1/p$</label></p>
+<p><strong>Theorem 3.6</strong></p>
+<p>(a) For the binomial $(n, p)$ random variable $X$ of Definition 3.6</p>
+<p><input type="checkbox" id="checkbox2" checked="true"><label for="checkbox2">= np \space $$</label></p>
+<p>(b) For the Pascal $(k, p)$ random variable $X$ of Definition 3.7</p>
+<p><input type="checkbox" id="checkbox3" checked="true"><label for="checkbox3">= k/p $$</label></p>
+<p>(c) For the discrete uniform $(k, l)$ random variable $X$ of Definition 3.8</p>
+<p><input type="checkbox" id="checkbox4" checked="true"><label for="checkbox4">= \frac{k + l}{2} $$</label></p>
+<p><strong>Theorem 3.8</strong> Perfom $n$ Bernoulli trials.  In each trial, let the probability of success be ${\alpha} / n$, where ${\alpha} &gt; 0$ is a constant and $n &gt;\alpha.$  Let the random variable $K_n$ be the number of successes in the $n$ trials.  As $n \rightarrow \infty, P_{K_n}(k)$ converges to the PMF of a Poisson $(\alpha)$ random variable.</p>
+<p><strong>Theorem 3.9</strong>  For a discrete random variable $X$, the PMF of $Y = g(X)$ is</p>
+<p>$$ P_Y(y) = \sum_{x: g(x) = y} P_X(x) $$</p>
+<p><strong>Theorem 3.10</strong>  Given a random variable $X$ with PMF $P_X(x),$ and the derived random variable $Y = g(x),$ the expected value of $Y$ is</p>
+<p>$$ E[Y] = \mu_Y = \sum_{x \in S_x} g(x) P_X(x)  $$</p>
+<p><strong>Theorem 3.11</strong> For any random variable $X$</p>
+<p>$$ E[X - \mu_{X}] = 0 $$</p>
+<p><strong>Theorem 3.12</strong>  For any random variable $X$</p>
+<p><input type="checkbox" id="checkbox5" checked="true"><label for="checkbox5">+ b $$</label></p>
+<p><strong>Theorem 3.13</strong>  In the absence of observations, the minimum mean square error estimate random variable $X$ is</p>
+<p><input type="checkbox" id="checkbox6" checked="true"><label for="checkbox6">$$</label></p>
+<p><strong>Theorem 3.14</strong></p>
+<p><input type="checkbox" id="checkbox7" checked="true"><label for="checkbox7">= E[X^2] - \mu^2_X = E[X^2] - (E[X])^2 $$</label></p>
+<p><strong>Theorem 3.15</strong></p>
+<p><input type="checkbox" id="checkbox8" checked="true"><label for="checkbox8">$$</label></p>
+<p><strong>Theorem 3.16</strong></p>
+<p><input type="checkbox" id="checkbox9" checked="true"><label for="checkbox9">= p(1-p)$</label></p>
+<p><input type="checkbox" id="checkbox10" checked="true"><label for="checkbox10">= ({1-p})/{p^2}$</label></p>
+<p><input type="checkbox" id="checkbox11" checked="true"><label for="checkbox11">= np(1 - p)$</label></p>
+<p><input type="checkbox" id="checkbox12" checked="true"><label for="checkbox12">= k(1 - p)/p^2$</label></p>
+<p><input type="checkbox" id="checkbox13" checked="true"><label for="checkbox13">= \alpha$</label></p>
+<p><input type="checkbox" id="checkbox14" checked="true"><label for="checkbox14">= (l - k)(l - k + 2)/12$</label></p>
+<p><strong>Definition 3.1 Random Variable</strong></p>
+<p>A random variable consists of an experiment with a probability measure $P[.]$ defined on a sample space S and a function that assigns a real number to each outcome in the sample spacce of the experiment.</p>
+<p><strong>Definition 3.2 Discrete Random Variable</strong>  $X$ is a discrete random variable if the range of $X$ is a countable set.</p>
+<p>$$ S_X = { x_1, x_2, \dots } $$</p>
+<p><strong>Definition 3.3 Probability Mass Function PMF</strong>  The probability mass function (PMF) of a discrete random variable $X$ is a function that assigns a probability to each value in the range of $X$</p>
+<p>$$ P_X(x) = P[X = x] $$</p>
+<p><strong>Definition 3.4 Bernoulii (p) Random Variable</strong> $X$ is a Bernoulli $(p)$ random variable if the PMF of X has the form</p>
+<p>$$ {P_X(x)} = \begin{cases}
+{1-p} &amp; x = 0 \
+{p} &amp; x = 1 \
+0 &amp; \text{otherwise} \<br>
+\end{cases} $$</p>
+<p>$\text{where the parameter p is on the range } 0 &lt; p &lt; 1 $</p>
+<p><strong>Definition 3.5 Geometric (p) Random Variable</strong> $X$ is a geometric $(p)$ random variable if the PMF of $X$ has the form</p>
+<p>$$ {P_X(x)} = \begin{cases}
+{p(1-p)^{x-1}} &amp; x = 1, 2, 3, \dots \
+0 &amp; \text{otherwise} \<br>
+\end{cases} $$</p>
+<p>where the parameter p is on the range $0 &lt; p &lt; 1$</p>
+<p><strong>Definition 3.6 Binomial $\text{(n, p)}$ Random Variable</strong> X is a binomial (n, p) random variable if the PMF of X has the form</p>
+<p>$$ P_X(s) = {n \choose x} p^x (1-p)^{n-x} $$</p>
+<p>where $0 &lt; p &lt; 1$ and n is an integer such that $n ≥ 1$</p>
+<p><strong>Definition 3.7 Pascal $\text{(k, p)}$ Random Variable</strong></p>
+<p>$$ P_X(x) = {{x-1} \choose {k-1}} p^k (1-p)^{x-k} $$</p>
+<p>where $0 &lt; p &lt; 1$ and k is an integer such that $k ≥ 1$</p>
+<p><strong>Definition 3.8 Discrete Uniform $\text{(k, l)}$ Random Variable</strong>  $X$ is a discrete uniform $(k, l)$ random variable if the PMF of X has the form</p>
+<p>$$ {P_X(x)} = \begin{cases}
+{1}/{(l - k + 1)} &amp; x = k, k + 1, k + 2 , ... \space , l \
+0 &amp; \text{otherwise} \
+\end{cases} $$</p>
+<p>where the parameters k and l are integers such that $k &lt; l.$</p>
+<p><strong>Definition 3.9 Poisson $(\alpha)$ Random Variable</strong>  $X$ is a Poisson $(\alpha)$ random variable if the PMF of X has the form</p>
+<p>$$ P_X(x) = \begin{cases}
+{{\alpha^x e^{-\alpha}}/{x!}} \space &amp; x = 0, 1, 2,\dots , \
+0 &amp; \space \text{otherwise} \
+\end{cases} $$</p>
+<p>where the parameter $\alpha$ is in the range $\alpha &gt; 0$</p>
+<p><strong>Definition 3.10 Cumulative Distribution Function (CDF)</strong>  The cumulative distribution function (CDF) of a discrete random variable $X$ is a function that assigns a probability to each value in the range of $X$.</p>
+<p>$$ F_X(x) = P[X \leq x] $$</p>
+<p><strong>Definition 3.11 Mode</strong>  A mode of random variable $X$ is a number $x_{mod}$ satisfying $P_X(x_{mod}) ≥ P_X(x)$ for all $x$</p>
+<p><strong>Definition 3.12 Median</strong>  A median $x_{med}$ of random variable $X$ is a number that satisfies</p>
+<p>$$ P[X \leq x_{med}] = 1/2, \space{} \space{}  P[X \geq x_{med}] = 1/2 $$</p>
+<p><strong>Definition 3.13 Expected Value</strong>  The expected value of $X$ is</p>
+<p><input type="checkbox" id="checkbox15" checked="true"><label for="checkbox15">= \mu_{X} = \sum_{x \in S_X} x P_X(x) $$</label></p>
+<p><strong>Definition 3.14 Derived Random Variable</strong>  Each sample value y of a derived random variable $Y$ is a mathematical function $g(x)$ of a sample value $x$ of another random variable $X$.  We adopt the notation  $Y = g(X)$ to describe the relationship of the two random variables.</p>
+<p><strong>Definition 3.15 Variance</strong>  The variance of random variable $X$ is</p>
+<p><input type="checkbox" id="checkbox16" checked="true"><label for="checkbox16">= \sigma^2_X = E[(X - \mu{X})^2] $$</label></p>
+<p><strong>Definition 3.16 Standard Deviation</strong>  The standard deviation of random variable $X$ is</p>
+<p>$$ \sigma_X = \sqrt{Var[X]} $$</p>
+<p><strong>Definition 3.17 Moments</strong>  For random variable $X$</p>
+<p>(a) The nth moment is $E[X^n]$</p>
+<p>(b) The nth central moment is $E[(X - \mu_X)^n]$</p>
+<h2 id="4-continuous-random-variables">4. Continuous Random Variables</h2>
+<p><strong>Theorem 4.1</strong> For any random variable $X$,</p>
+<p>(a) $F_X(-\infty) = 0$</p>
+<p>(b) $F_X(\infty) = 1$</p>
+<p>(c) $P[x_1 &lt; X ≤ x_2] = F_X(x_2) - F_X(x_1)$</p>
+<p><strong>Theorem 4.2</strong> For a continuous random variable $X$, with PMF $f_X(x)$,</p>
+<p>(a) $f_X(x) ≥ 0 \text{ for all x, } $</p>
+<p>(b) $f_X(x) = \int_{-\infty}^{x} f_X(u) \space du, $</p>
+<p>(c) $\int_{-\infty}^{\infty} f_X(x) dx = 1$</p>
+<p><strong>Theorem 4.3</strong></p>
+<p>$$ P[x_1 &lt; X ≤ x_2] = \int_{x_1}^{x_2} f_X(x) dx $$</p>
+<p><strong>Theorem 4.4</strong>  The expected value of a function, $g(X)$, of random variable $X$ is</p>
+<p>$$ E[g(X)] = \int_{-\infty}^{\infty} g(x) f_X(x) dx $$</p>
+<p><strong>Theorem 4.5</strong>  For any random variable $X$,</p>
+<p>(a) $E[X - \mu{X} ] = 0 $</p>
+<p><input type="checkbox" id="checkbox17" checked="true"><label for="checkbox17">+ b $</label></p>
+<p><input type="checkbox" id="checkbox18" checked="true"><label for="checkbox18">= E[X^2] - {\mu{^2}}_X $</label></p>
+<p><input type="checkbox" id="checkbox19" checked="true"><label for="checkbox19">$</label></p>
+<p><strong>Theorem 4.6</strong>  If $X$ is a uniform $(a, b)$ random variable,</p>
+<ul>
+<li>The CDF of $X$ is</li>
+</ul>
+<p>$$F_X(x) = \begin{cases}
+0 &amp; x &lt; a \
+{(x - a)}/{(b - a)} &amp; a ≤ x ≤ b \
+1 &amp; x &gt; b \
+\end{cases} $$</p>
+<ul>
+<li>
+<p><input type="checkbox" id="checkbox20" checked="true"><label for="checkbox20">= {(a + b)}/{2} $</label></p>
+</li>
+<li>
+<p><input type="checkbox" id="checkbox21" checked="true"><label for="checkbox21">= {(b - a)^2}/{12} $</label></p>
+</li>
+</ul>
+<p><strong>Theorem 4.7</strong> Let $X$ be a uniform $(a, b)$ random variable, where $a$ and $b$ are both integers.  Let $K = \lceil X \rceil$.  Then $K$ is a discrete uniform $(a + 1, b)$ random variable.</p>
+<p><strong>Theorem 4.8</strong> If $X$ is an exponential $(\lambda)$ random variable,</p>
+<ul>
+<li>The CDF of $X$ is</li>
+</ul>
+<p>$$F_X(x) = \begin{cases}
+1 - e^{-\lambda x} &amp; x ≥ 0 \
+0 &amp; otherwise \
+\end{cases}$$</p>
+<ul>
+<li>
+<p><input type="checkbox" id="checkbox22" checked="true"><label for="checkbox22">= {1}/{\lambda} $</label></p>
+</li>
+<li>
+<p><input type="checkbox" id="checkbox23" checked="true"><label for="checkbox23">= {1}/{\lambda^2} $</label></p>
+</li>
+</ul>
+<p><strong>Theorem 4.9</strong> If $X$ is an exponential $(\lambda)$ random variable, then $K = \lceil X \rceil$ is a geometric $(p)$ random variable with $p = 1 - e^{-\lambda}$</p>
+<p><strong>Theorem 4.10</strong> If $X$ is an Erlang $(n, \lambda)$ random variable, then</p>
+<p><input type="checkbox" id="checkbox24" checked="true"><label for="checkbox24">= {n\over{(\lambda)}} $</label></p>
+<p><input type="checkbox" id="checkbox25" checked="true"><label for="checkbox25">= {n\over{(\lambda)^2}} $</label></p>
+<p><strong>Theorem 4.11</strong> Let $K_\alpha$ denote a Poisson $\alpha$ random variable.  For any $x &gt; 0$, the CDF of an Erlang $(n, \lambda)$ random variable $X$ satisfies,</p>
+<p>$$ F_X(x) = 1 - F_{K_\alpha}(n - 1) = \begin{cases}
+1 - \sum_{k = 0}^{n - 1} \frac{(\lambda x)^k e^{-\lambda x}}{k!} &amp; x ≥ n \
+0 &amp; otherwise \
+\end{cases} $$</p>
+<p><strong>Theorem 4.12</strong>  If $X$ is a Gaussian $(\mu, \sigma)$ random variable, then</p>
+<p><input type="checkbox" id="checkbox26" checked="true"><label for="checkbox26">= \mu \space \space \space \space \space \space \space \space \space \space \space \space Var[X] = \sigma^2 $$</label></p>
+<p><strong>Theorem 4.13</strong> If $X$ is a Gaussian $(\mu, \sigma), Y = aX + b$  is Gaussian $(a\mu + b, a\sigma)$</p>
+<p><strong>Theorem 4.14</strong> If $X$ is a Gaussian $(\mu, \sigma)$ random variable, the CDF of $X$ is</p>
+<p>$$ F_X(x) = \Phi \left( \frac{x - \mu}{\sigma} \right) $$</p>
+<p>The probability that $X$ is in the interval $(a, b]$ is</p>
+<p>$$ P[a &lt; X ≤ b] = \Phi \left( \frac{b - \mu}{\sigma} \right) - \Phi \left( \frac{a - \mu}{\sigma} \right) $$</p>
+<p><strong>Theorem 4.15</strong> $\space \space \Phi(-z) = 1 - \Phi(z)$</p>
+<p><strong>Theorem 4.16</strong> For any continuous function g(x),</p>
+<p>$$ \int_{-\infty}^{\infty} g(x) \delta(x - x_0) dx = g(x_0) $$</p>
+<p><strong>Theorem 4.17</strong> $\int_{-\infty}^{x} \delta(v) dv = u(x) $</p>
+<p><strong>Theorem 4.18</strong> For a random variable $X$, we have the folloing equivalent statements:</p>
+<p>$\text{(a) } P[X = x_0] = q$</p>
+<p>$\text{(b) } P[x_0] = q$</p>
+<p>$\text{(c) } F_X(x_{0}^+) - F_X(x_{0}^-) = q$</p>
+<p>$\text{(d) } f_x(x_0) = q \delta(0)$</p>
+<p><strong>Definition 4.1 Cumulative Distribution Function (CDF)</strong> The cumulative distribution function (CDF) of random variable $X$ is $F_X(x) = P[X ≤ x]$</p>
+<p><strong>Definition 4.2 Continuous Random Variable</strong> $X$ is a continuous random variable if the CDF F_X(x) is a continuous function.</p>
+<p><strong>Definition 4.3 Probability Density Function (PDF)</strong> The probability density function (PDF) of a continuous random variable $X$ is</p>
+<p>$$f_X(x) = \frac{dF_X(x)}{dx}$$</p>
+<p><strong>Definition 4.4 Expected Value</strong> The expected value of a random variable $X$ is</p>
+<p><input type="checkbox" id="checkbox27" checked="true"><label for="checkbox27">= \int_{-\infty}^{\infty} x f_X(x) dx$$</label></p>
+<p><strong>Definition 4.5 Uniform Random Variable</strong> $X$ is a uniform $(a, b)$ random variable if the PDF of $X$ is $f_X(x)$, and where the parameter $\lambda &gt; 0$</p>
+<p>$$f_X(x) = \begin{cases}
+{1}/{(b - a)} &amp; \space a ≤ x ≤ b \
+0 &amp; \space otherwise \
+\end{cases} $$</p>
+<p><strong>Definition 4.6  Exponential Random Variable</strong> $X$ is an exponential (\lambda) random variable if the PDF of $X$ is $f_X(x)$, and where the parameter $\lambda &gt; 0$</p>
+<p>$$f_x(x) = \begin{cases}
+\lambda e^{-\lambda x} &amp; \space x ≥ 0 \
+0 &amp; \space otherwise \
+\end{cases} $$</p>
+<p><strong>Definition 4.7 Erlang Random Variable</strong> $X$ is an Erlang $(n, \lambda)$ random variable if the PDF of $X$ is $f_X(x)$ where the parameter $\lambda &gt; 0$, and the parameter $n ≥ 1$ is an integer.</p>
+<p>$$f_X(x) = \begin{cases}
+\frac{\lambda^n x^{n - 1} e^{-\lambda x}}{(n - 1)!} &amp; \space x ≥ n \
+0 &amp; \space otherwise \
+\end{cases} $$</p>
+<p><strong>Definition 4.8 Gaussian Random Variable</strong> $X$ is a Gaussian $(\mu, \sigma)$ random variable if the PDF of $X$ is $f_X(x)$ where the parameter $\mu$ can be any real number and the parameter $\sigma &gt; 0$</p>
+<p>$$\begin{align} f_X(x) = \frac{1}{\sqrt{2\pi}\sigma} e^{-{(x - \mu)^2}/{2\sigma^2}} \end{align}$$</p>
+<p><strong>Definition 4.9 Standard Normal Random Variable</strong>  The standard normal random variable $Z$ is the Gaussian $(0, 1)$ random variable.</p>
+<p><strong>Definition 4.10 Standard Normal CDF</strong>  The CDF of the standard normal random variable $Z$ is</p>
+<p>$$\Phi(z) = \frac{1}{\sqrt{2\pi}} \int_{-\infty}^{z} e^{-{u^2}/{2}} du$$</p>
+<p><strong>Definition 4.11 Standard Normal Complementary CDF</strong>  The standard normal complementary CDF is</p>
+<p>$$ Q(z) = P[Z &gt; z] = \frac{1}{\sqrt{2\pi}} \int_{z}^{\infty} e^{-{u^2}/{2}} du = 1 - \Phi(z)$$</p>
+<p><strong>Definition 4.12 Unit Impluse (Delta) Function</strong> Let</p>
+<p>$$\delta(x) = \begin{cases}
+1/{\epsilon} &amp; -\epsilon/2 ≤ x ≤ \epsilon/2 \
+0 &amp; \space otherwise \
+\end{cases} $$</p>
+<p>The unit impulse function</p>
+<p>$$\delta(x) = \lim_{x \to 0} d_{\epsilon}(x)$$</p>
+<p><strong>Definition 4.13 Unit Step Function</strong>  The unit step function is</p>
+<p>$$u(x) = \begin{cases}
+1 &amp; x &lt; 0 \
+0 &amp; x ≥ 0 \
+\end{cases} $$</p>
+<p><strong>Definition 4.14 Mixed Random Variable</strong> $X$ is a mixed random variable if and only if $F_X(x)$ contains both impluses and nonzero, finite values.</p>
+
+</body>
+</html>
