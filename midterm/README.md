@@ -25,7 +25,7 @@ $$ P[A] = \sum_{i=1}^m P[A_i] $$
 
 - $A \subset B, P[A] \leq P[B]$
 
-**Theorem 1.5** The probability of an event $ B = {s_1, s_2, \cdots, s_m} $ is the sum of the probabilities of the outcomes contained in the event:
+**Theorem 1.5** The probability of an event $B = {s_1, s_2, \cdots, s_m}$ is the sum of the probabilities of the outcomes contained in the event:
 
 $$ P[B] = \sum_{i=1}^m P[{s_i}] $$
 
