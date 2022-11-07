@@ -473,14 +473,14 @@ $$\Phi(z) = \frac{1}{\sqrt{2\pi}} \int_{-\infty}^{z} e^{-{u^2}/{2}} du$$
 
 $$ Q(z) = P[Z > z] = \frac{1}{\sqrt{2\pi}} \int_{z}^{\infty} e^{-{u^2}/{2}} du = 1 - \Phi(z)$$
 
-**Definition 4.12 Unit Impluse (Delta) Function** $Let$
+**Definition 4.12 Unit Impluse (Delta) Function** Let
 
 $$\delta(x) = \begin{cases} 
             1/{\epsilon} & -\epsilon/2 ≤ x ≤ \epsilon/2 \\
             0 & \space otherwise \\
             \end{cases} $$
 
-The unit impulse function 
+The unit impulse function
 
 $$\delta(x) = \lim_{x \to 0} d_{\epsilon}(x)$$
 
