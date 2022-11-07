@@ -107,49 +107,31 @@ If $n ≥ 3$ events $A_1, A_2, \cdots, A_n$ are mutually independent if an only 
 
 ## 2.  Sequential Experiments
 
-**Theorem 2.1**
+**Theorem 2.1**  An experiment consists of two subexperiments.  If one subexperiment has $k$ outcomes and the other has $n$ outcomes, then the experiment has $kn$ outcomes.
 
-An experiment consists of two subexperiments.  If one subexperiment has $k$ outcomes and the other has $n$ outcomes, then the experiment has $kn$ outcomes.
-
-**Theorem 2.2**
-
-The number of k-permutations of $n$ distinguishable objects is 
+**Theorem 2.2**  The number of k-permutations of $n$ distinguishable objects is 
 
 $$ {n \choose k} = {(n)_k \over k! } = {n! \over {k! (n - k)!}}$$
 
-**Theorem 2.4**
+**Theorem 2.4**  Given $m$ distinguishable objects, there are $m^n$ ways to choose ith replacement an ordered sample of n objects.
 
-Given $m$ distinguishable objects, there are $m^n$ ways to choose ith replacement an ordered sample of n objects.
+**Theorem 2.5**  For $n$ repitions of a subexperiment with sample space $S_sub = {s_1, s_2, \cdots, s_m-1}$, the sample space $S$ of the sequential experiment has $m^n$ outcomes.
 
-**Theorem 2.5**
+**Theorem 2.6**  The number of observation sequences for $n$ subexperiments with sample space $S = \{0,1\}$ with $0$ appearing $n_0$ times and $1$ appearing $n_1 = n - n_0$ times is $n \choose n_1$.
 
-For $n$ repitions of a subexperiment with sample space $S_sub = {s_1, s_2, \cdots, s_m-1}$, the sample space $S$ of the sequential experiment has $m^n$ outcomes.
-
-**Theorem 2.6**
-
-The number of observation sequences for $n$ subexperiments with sample space $S = \{0,1\}$ with $0$ appearing $n_0$ times and $1$ appearing $n_1 = n - n_0$ times is $n \choose n_1$.
-
-**Theorem 2.7**
-
-For n reptitions of a subexperiment with sample space $S = \{s_0, s_1, \cdots, s_m-1\}$, the number of length $n = n_0 + n_1 + \cdots + n_{m-1}$ observation sequences with $s_i$ appearing $n_i$ times is
+**Theorem 2.7**  For n reptitions of a subexperiment with sample space $S = \{s_0, s_1, \cdots, s_m-1\}$, the number of length $n = n_0 + n_1 + \cdots + n_{m-1}$ observation sequences with $s_i$ appearing $n_i$ times is
 
 $$ {n \choose n_0, n_1, \cdots, n_{m-1}} = {n! \over {n_0! n_1! \cdots n_{m-1}!}} $$
 
-**Theorem 2.8**
-
-The probability of $n_0$ failures and $n_1$ successes in $n = n_0 + n_1$ independent trials is 
+**Theorem 2.8**  The probability of $n_0$ failures and $n_1$ successes in $n = n_0 + n_1$ independent trials is 
 
 $$ P[E_{n_0, n_1}] = {n \choose n_1} (1-p)^{n-n_1} p^n_1 = {n \choose n_0} (1-p)^{n_0} p^{n - n_0} $$
 
-**Theorem 2.9**
-
-A subexperiment has sample space $S = \{s_0, s_1, \cdots, s_m-1\}$ with $P[s_i] = p_i$ for $n = n_0 + n_1 + \cdots + n_{m-1}$ independent trials, the probability of $n_i$ occurrences of $s_i$, $i = 0, 1, \cdots, m-1$ is
+**Theorem 2.9**  A subexperiment has sample space $S = \{s_0, s_1, \cdots, s_m-1\}$ with $P[s_i] = p_i$ for $n = n_0 + n_1 + \cdots + n_{m-1}$ independent trials, the probability of $n_i$ occurrences of $s_i$, $i = 0, 1, \cdots, m-1$ is
 
 $$ P[E_{n_0, n_1, \cdots, n_{m-1}}] = {n \choose n_0, n_1, \cdots, n_{m-1}} p_0^{n_0} p_1^{n_1} \cdots p_{m-1}^{n_{m-1}} $$
 
-**Definition 2.1 $n$ choose $k$** 
-
-For an integer $n ≥ 0$, we define 
+**Definition 2.1 $n$ choose $k$**   For an integer $n ≥ 0$, we define 
 
 $$ {n \choose k} = \begin{cases}
       {n! \over {k! (n - k)!}} & k = 0, 1, \dots, n, \\
@@ -161,9 +143,7 @@ $${n \choose n_0, n_1, \dots, n_{m-1}} = {n! \over {n_0! n_1! \cdots n_{m-1}!}}$
 
 ## 3. Discrete Random Variables
 
-**Theorem 3.1**
-
-$\text{For a discrete random variable X with PMF} P_X(x), \text{and range} \space S_x: $
+**Theorem 3.1** For a discrete random variable X with PMF $P_X(x)$ and range $S_X: $
 
 $\text{(a) For any x,} \space P_X(x) ≥ 0$
 
@@ -173,9 +153,7 @@ $\text{(c) For any event} $ $B \subset S_x, \space \text{The probability that X 
 
 $$P[B] = \sum_{x \in B} P_X(x)$$
 
-**Theorem 3.2**
-
-$\text{For any discrete random variable X with range} \space S_x = \{ x_1, x_2, \dots \}  \space \text{satisfying} \space x_1 ≤ x_2 ≤ \dots $,
+**Theorem 3.2**  $\text{For any discrete random variable X with range} \space S_x = \{ x_1, x_2, \dots \}  \space \text{satisfying} \space x_1 ≤ x_2 ≤ \dots $,
 
 $\text{(a) } F_X=(-\infty) = 0 \space \text{and} \space F_X(\infty) = 1 $
 
@@ -272,17 +250,17 @@ $ \text{(f) If X is discrete uniform (k, l), then } \space{  }  Var[X] = (l - k)
 
 **Definition 3.1 Random Variable**
 
-$$ \text{A random variable consists of an experiment with a probability measure P[.] defined on a sample space S and a function that assigns a real number to each outcome in the sample spacce of the experiment.}$$
+A random variable consists of an experiment with a probability measure $P[.]$ defined on a sample space S and a function that assigns a real number to each outcome in the sample spacce of the experiment.
 
 **Definition 3.2 Discrete Random Variable**
 
-$\text{X is a discrete random variable if the range of X is a countable set.}$
+$X$ is a discrete random variable if the range of $X$ is a countable set.
 
 $$ S_X = \{ x_1, x_2, \dots \} $$
 
 **Definition 3.3 Probability Mass Function PMF**
 
-$\text{The probability mass function (PMF) of a discrete random variable X is a function that assigns a probability to each value in the range of X.}$
+The probability mass function (PMF) of a discrete random variable $X$ is a function that assigns a probability to each value in the range of $X$
 
 $$ P_X(x) = P[X = x] $$
 
@@ -349,7 +327,7 @@ $\text{where the parameter } \alpha \text{ is in the range } \alpha > 0$
 
 **Definition 3.10 Cumulative Distribution Function (CDF)**
 
-$\text{The cumulative distribution function (CDF) of a discrete random variable X is a function that assigns a probability to each value in the range of X.}$
+The cumulative distribution function (CDF) of a discrete random variable $X$ is a function that assigns a probability to each value in the range of $X$.
 
 $$ F_X(x) = P[X \leq x] $$
 
@@ -359,7 +337,7 @@ $\text{A mode of random variable X is a number } x_mod \text{ satisfying } P_X(x
 
 **Definition 3.12 Median**
 
-$\text{A median, } x_med \text{, of random variable X is a number that satisfies }$
+$\text{A median, } x_{med} \text{, of random variable X is a number that satisfies }$
 
 $$ P[X \leq x_{med}] = 1/2, \space{} \space{}  P[X \geq x_{med}] = 1/2 $$
 
@@ -371,27 +349,29 @@ $$ E[X] = \mu_{X} = \sum_{x \in S_X} x P_X(x) $$
 
 **Definition 3.14 Derived Random Variable**
 
-$\text{Each sample value y of a derived random variable Y is a mathematical function g(x) of a sample value x of another random variable X.  We adopt the notation } Y = g(X) \text{ to describe the relationship of the two random variables.}$
+Each sample value y of a derived random variable $Y$ is a mathematical function $g(x)$ of a sample value $x$ of another random variable $X$.  We adopt the notation  $Y = g(X)$ to describe the relationship of the two random variables.
 
 **Definition 3.15 Variance**
 
-$\text{The variance of random variable X is }$
+The variance of random variable $X$ is
 
 $$ Var[X] = \sigma^2_X = E[(X - \mu{X})^2] $$
 
 **Definition 3.16 Standard Deviation**
 
-$\text{The standard deviation of random variable X is }$
+The standard deviation of random variable $X$ is
 
 $$ \sigma_X = \sqrt{Var[X]} $$
 
 **Definition 3.17 Moments**
 
-$\text{For random variable X: }$
+For random variable $X$
 
 $\text{(a) The nth moment is } E[X^n]$
 
 $\text{(b) The nth central moment is } E[(X - \mu_X)^n]$
+
+## 4. Continuous Random Variables
 
 **Theorem 4.1** For any random variable $X$,
 
@@ -411,4 +391,150 @@ $\text{(c) } \int_{-\infty}^{\infty} f_X(x) dx = 1$
 
 **Theorem 4.3** 
 
+$$ P[x_1 < X ≤ x_2] = \int_{x_1}^{x_2} f_X(x) dx $$
 
+**Theorem 4.4** 
+
+The expected value of a function, $g(X)$, of random variable $X$ is
+
+$$ E[g(X)] = \int_{-\infty}^{\infty} g(x) f_X(x) dx $$
+
+**Theorem 4.5**
+
+For any random variable $X$,
+
+$\text{(a) } E[X - \mu{X} ] = 0 $
+
+$\text{(b) } E[aX + b] = aE[X] + b $
+
+$\text{(c) } Var[X] = E[X^2] - {\mu{^2}}_X $
+
+$\text{(d) } Var[aX + b] = a^2 Var[X] $
+
+**Theorem 4.6**
+
+If $X$ is a uniform $(a, b)$ random variable,
+
+- The CDF of $X$ is $$ F_X(x) = \begin{cases} 
+            0 & x < a \\
+            {(x - a)}/{(b - a)} & a ≤ x ≤ b \\
+            1 & x > b \\
+            \end{cases} $$
+
+- The expected value of $X$ is $E[X] = {(a + b)}/{2} $
+
+- The variabce of $X$ is $Var[X] = {(b - a)^2}/{12} $
+
+**Theorem 4.7** Let $X$ be a uniform $(a, b)$ random variable, where $a$ and $b$ are both integers.  Let $K = \lceil X \rceil$.  Then $K$ is a discrete uniform $(a + 1, b)$ random variable.
+
+**Theorem 4.8** If $X$ is an exponential $(\lambda)$ random variable,
+
+- The CDF of $X$ is $ F_X(x) = \begin{cases} 
+            1 - e^{-\lambda x} & x ≥ 0 \\
+            0 & otherwise \\
+            \end{cases} $
+
+- The expected value of $X$ is $E[X] = {1}/{\lambda} $
+
+- The variance of $X$ is $Var[X] = {1}/{\lambda^2} $
+
+**Theorem 4.9** If $X$ is an exponential $(\lambda)$ random variable, then $K = \lceil X \rceil$ is a geometric (p) random variable with $ p = 1 - e^{-\lambda} $
+
+**Theorem 4.10** If $X$ is an Erlang $(n, \lambda)$ random variable, then 
+
+$\text{(a) } E[X] = {n\over{(\lambda)}} $
+
+$\text{(b) } Var[X] = {n\over{(\lambda)^2}} $
+
+**Theorem 4.11** Let $K_\alpha$ denote a Poisson ($\alpha$) random variable.  For any $x > 0$, the CDF of an Erlang $(n, \lambda)$ random variable $X$ satisfies,
+
+$$ F_X(x) = 1 - F_{K_\alpha}(n - 1) = \begin{cases} 
+
+            1 - \sum_{k = 0}^{n - 1} \frac{(\lambda x)^k e^{-\lambda x}}{k!} & x ≥ n \\
+            0 & otherwise \\
+
+\end{cases} $$
+
+**Theorem 4.12**  If $X$ is a Gaussian $(\mu, \sigma)$ random variable, then
+
+$$ E[X] = \mu \space \space \space \space \space \space \space \space \space \space \space \space Var[X] = \sigma^2 $$
+
+**Theorem 4.13** If $X$ is a Gaussian $(\mu, \sigma), Y = aX + b $  is Gaussian $(a\mu + b, a\sigma)$
+
+**Theorem 4.14** If $X$ is a Gaussian $(\mu, \sigma)$ random variable, the CDF of $X$ is 
+
+$$ F_X(x) = \Phi \left( \frac{x - \mu}{\sigma} \right) $$
+
+The probability that $X$ is in the interval $(a, b]$ is
+
+$$ P[a < X ≤ b] = \Phi \left( \frac{b - \mu}{\sigma} \right) - \Phi \left( \frac{a - \mu}{\sigma} \right) $$
+
+**Theorem 4.15** $\space \space \Phi(-z) = 1 - \Phi(z)$
+
+**Theorem 4.16** For any continuous function g(x), 
+
+$$ \int_{-\infty}^{\infty} g(x) \delta(x - x_0) dx = g(x_0) $$
+
+**Theorem 4.17** $\int_{-\infty}^{x} \delta(v) dv = u(x) $
+
+**Theorem 4.18** For a random variable $X$, we have the folloing equivalent statements:
+
+$\text{(a) } P[X = x_0] = q $
+
+$\text{(b) } P[x_0] = q $
+
+$\text{(c) } F_X(x_{0}^+) - F_X(x_{0}^-) = q $
+
+$ \text{(d) } f_x(x_0) = q \delta(0) $
+
+**Definition 4.1 Cumulative Distribution Function (CDF)** The cumulative distribution function (CDF) of random variable $X$ is $F_X(x) = P[X ≤ x]$
+
+**Definition 4.2 Continuous Random Variable** $X$ is a continuous random variable if the CDF F_X(x) is a continuous function.
+
+**Definition 4.3 Probability Density Function (PDF)** The probability density function (PDF) of a continuous random variable $X$ is 
+
+$$f_X(x) = \frac{dF_X(x)}{dx}$$
+
+**Definition 4.4 Expected Value** The expected value of a random variable $X$ is 
+
+$$E[X] = \int_{-\infty}^{\infty} x f_X(x) dx$$
+
+**Definition 4.5 Uniform Random Variable** $X$ is a uniform $(a, b)$ random variable if the PDF of $X$ is $f_X(x)$, and where the parameter $\lambda > 0$
+
+$$f_X(x) = \begin{cases} 
+            {1}/{(b - a)} & \space a ≤ x ≤ b \\
+            0 & \space otherwise \\
+            \end{cases} $$
+
+**Definition 4.6  Exponential Random Variable** $X$ is an exponential (\lambda) random variable if the PDF of $X$ is $f_X(x)$, and where the parameter $\lambda > 0$
+
+$$f_x(x) = \begin{cases} 
+            \lambda e^{-\lambda x} & \space x ≥ 0 \\
+            0 & \space otherwise \\
+            \end{cases} $$
+
+**Definition 4.7 Erlang Random Variable** $X$ is an Erlang $(n, \lambda)$ random variable if the PDF of $X$ is $f_X(x)$ where the parameter $\lambda > 0$, and the parameter $n ≥ 1$ is an integer.
+
+$$f_X(x) = \begin{cases} 
+            \frac{\lambda^n x^{n - 1} e^{-\lambda x}}{(n - 1)!} & \space x ≥ n \\
+            0 & \space otherwise \\
+            \end{cases} $$
+
+**Definition 4.8 Gaussian Random Variable** $X$ is a Gaussian $(\mu, \sigma)$ random variable if the PDF of $X$ is $f_X(x)$ where the parameter \$\mu$ can be any real number and the parameter $\sigma > 0$
+
+$$\begin{align} f_X(x) = \frac{1}{\sqrt{2\pi}\sigma} e^{-{(x - \mu)^2}/{2\sigma^2}} \end{align}$$
+
+
+**Definition 4.9 Standard Normal Random Variable**  The standard normal random variable $Z$ is the Gaussian $(0, 1)$ random variable.
+
+**Definition 4.10 Standard Normal CDF**  The CDF of the standard normal random variable $Z$ is 
+
+$$\Phi(z) = \frac{1}{\sqrt{2\pi}} \int_{-\infty}^{z} e^{-{u^2}/{2}} du$$
+
+**Definition 4.11 Standard Normal Complementary CDF**
+
+**Definition 4.12**
+
+**Definition 4.13**
+
+**Definition 4.14**
