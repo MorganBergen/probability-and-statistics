@@ -1,4 +1,7 @@
 # probability and stochastic processes
+
+[Probabilistic Systems Analysis and Applied Probability](https://youtu.be/j9WZyLZCBzs)
+
 ## 1.  experiments, models, and probabilities
 
 **theorem 1.1** demorgan's law related all three basic operations $(A \cup B)^c = (A^c \cap B^c)$
